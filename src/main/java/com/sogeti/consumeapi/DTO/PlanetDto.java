@@ -1,7 +1,8 @@
 package com.sogeti.consumeapi.DTO;
 
-import com.google.gson.JsonArray;
+import com.google.gson.*;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class PlanetDto {
@@ -19,6 +20,30 @@ public class PlanetDto {
     private String created;
     private String edited;
     private String url;
+
+    public PlanetDto() {
+    }
+
+    public PlanetDto(String name, String rotation_period_minutes, String orbital_period, String diameter, String climate, String gravity, String terrain, String surface_water, String population, JsonArray residents, JsonArray films, String created, String edited, String url) {
+        this.name = name;
+        this.rotation_period_minutes = rotation_period_minutes;
+        this.orbital_period = orbital_period;
+        this.diameter = diameter;
+        this.climate = climate;
+        this.gravity = gravity;
+        this.terrain = terrain;
+        this.surface_water = surface_water;
+        this.population = population;
+        this.residents = residents;
+        this.films = films;
+        this.created = created;
+        this.edited = edited;
+        this.url = url;
+    }
+
+
+
+
 
     public void setName(String name) {
         this.name = name;
@@ -94,5 +119,61 @@ public class PlanetDto {
                 ", edited='" + edited + '\'' +
                 ", url='" + url + '\'' +
                 '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getRotation_period_minutes() {
+        return rotation_period_minutes;
+    }
+
+    public String getOrbital_period() {
+        return orbital_period;
+    }
+
+    public String getDiameter() {
+        return diameter;
+    }
+
+    public String getClimate() {
+        return climate;
+    }
+
+    public String getGravity() {
+        return gravity;
+    }
+
+    public String getTerrain() {
+        return terrain;
+    }
+
+    public String getSurface_water() {
+        return surface_water;
+    }
+
+    public String getPopulation() {
+        return population;
+    }
+
+    public JsonArray getResidents() {
+        return residents;
+    }
+
+    public JsonArray getFilms() {
+        return films;
+    }
+
+    public String getCreated() {
+        return created;
+    }
+
+    public String getEdited() {
+        return edited;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }
