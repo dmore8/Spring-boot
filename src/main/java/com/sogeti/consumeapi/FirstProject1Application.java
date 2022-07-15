@@ -1,5 +1,6 @@
 package com.sogeti.consumeapi;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -11,9 +12,9 @@ import java.util.List;
 public class FirstProject1Application {
 
 	@Bean
-	public RestTemplate getresRestTemplate() {
+	public ModelMapper modelMapper() {
 
-		return new RestTemplate();
+		return new ModelMapper();
 	}
 	
 	public static void main(String[] args) {
